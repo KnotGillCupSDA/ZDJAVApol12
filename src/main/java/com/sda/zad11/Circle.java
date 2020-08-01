@@ -1,17 +1,26 @@
 package com.sda.zad11;
 
-public class Circle implements Movable {
+public class Circle implements Movable, Resizable {
 
     private final Point2D center;
 
-    private final double radius;
-    private final double perimeter;
-    private final double area;
+    private double radius;
+    private double perimeter;
+    private double area;
 
     public Circle(Point2D center, Point2D point) {
         this.center = center;
+
         radius = Math.sqrt(Math.pow(center.getX() - point.getX(), 2) + Math.pow(center.getY() - point.getY(), 2));
+        calculatePerimeter();
+        calculateArea();
+    }
+
+    private void calculatePerimeter() {
         perimeter = 2 * Math.PI * radius;
+    }
+
+    private void calculateArea() {
         area = Math.pow(radius, 2) * Math.PI;
     }
 
@@ -30,5 +39,12 @@ public class Circle implements Movable {
     @Override
     public void move(MoveDirection moveDirection) {
         center.move(moveDirection);
+    }
+
+    @Override
+    public void resize(double resizeFactor) {
+        radius *= resizeFactor;
+        calculatePerimeter();
+        calculateArea();
     }
 }
