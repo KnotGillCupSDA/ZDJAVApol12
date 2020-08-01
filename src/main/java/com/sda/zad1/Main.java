@@ -10,6 +10,7 @@ public class Main {
         List<String> strings = new ArrayList<>();
         strings.add("Bartosz");
         strings.add("Jakub");
+        strings.add("jakub");
         strings.add("Emma");
         strings.add("Ola");
         strings.add("Tomek");
