@@ -1,6 +1,7 @@
-package com.sda.zad1;
+package com.sda.zad2;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -34,13 +35,15 @@ public class Main {
         });*/
 
         //java 8 - lambda
-        //Collections.sort(sorted, (o1, o2) -> -o1.compareTo(o2));
+        //Collections.sort(sorted, (o1, o2) -> -o1.toLowerCase().compareTo(o2.toLowerCase()));
 
         //java 8 - comparator
         //Collections.sort(sorted, Comparator.reverseOrder());
 
         //java 11
-        sorted.sort(Comparator.reverseOrder());
+        //sorted.sort(String.CASE_INSENSITIVE_ORDER.reversed());
+
+        sorted.sort((o1, o2) -> -o1.compareToIgnoreCase(o2));
 
         return sorted;
     }
