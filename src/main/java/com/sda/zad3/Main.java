@@ -38,7 +38,8 @@ public class Main {
         }
         System.out.println("====");
 
-        //input.forEach((key, value) -> System.out.println("Klucz: " + key + ", Wartość: " + value));
+        input.forEach((key, value) -> System.out.println("Klucz: " + key + ", Wartość: " + value));
+        System.out.println("====");
 
         //with stream and collect
         System.out.println(input.entrySet().stream()

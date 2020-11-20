@@ -1,6 +1,6 @@
 Zadanie 8.
-Zaimplementuj interfejs Validator, który będzie zawierać w swojej deklaracji metodę boolean
-validate(Parcel input). Stwórz klasę Parcel z parametrami:
+Zaimplementuj interfejs Validator, który będzie zawierać w swojej deklaracji metodę boolean validate(Parcel input). 
+Stwórz klasę Parcel z parametrami:
 • int xLength
 • int yLength
 • int zLength

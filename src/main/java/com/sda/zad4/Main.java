@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Storage storage = new Storage();
         storage.addToStorage("smietana", "2");
-        storage.addToStorage("jpgurt", "3");
+        storage.addToStorage("jogurt", "3");
         storage.addToStorage("smietana", "3");
         storage.addToStorage("oliwa", "35");
 

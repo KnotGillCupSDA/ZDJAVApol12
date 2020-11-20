@@ -26,24 +26,10 @@ public class Main {
         //we should make a copy
         List<String> sorted = new ArrayList<>(unsorted);
 
-        //java before java 8
-        /*Collections.sort(sorted, new Comparator<String>() {
-            @Override
-            public int compare(String o1, String o2) {
-                return -o1.compareTo(o2);
-            }
-        });*/
-
-        //java 8 - lambda
-        //Collections.sort(sorted, (o1, o2) -> -o1.toLowerCase().compareTo(o2.toLowerCase()));
-
-        //java 8 - comparator
-        //Collections.sort(sorted, Comparator.reverseOrder());
+        sorted.sort((o1, o2) -> -o1.compareToIgnoreCase(o2));
 
         //java 11
         //sorted.sort(String.CASE_INSENSITIVE_ORDER.reversed());
-
-        sorted.sort((o1, o2) -> -o1.compareToIgnoreCase(o2));
 
         return sorted;
     }
