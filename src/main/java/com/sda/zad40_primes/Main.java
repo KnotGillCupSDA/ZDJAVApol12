@@ -1,4 +1,4 @@
-package com.sda.primes;
+package com.sda.zad40_primes;
 
 import java.io.IOException;
 import java.nio.file.Path;
